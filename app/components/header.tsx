@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from 'react';
 import { Inter } from 'next/font/google';
+import Link from 'next/link';
 
 const inter = Inter({
     subsets: ['latin'],
@@ -35,7 +36,7 @@ export default function Header() {
                 <nav>
                     <ul className='flex gap-4 items-center'>
                         <li>
-                            <a 
+                            <Link 
                                 href="/"
                                 className={`px-4 py-2 rounded-full transition-all duration-500 text-sm font-medium 
                                 ${scrolled 
@@ -44,10 +45,10 @@ export default function Header() {
                                 ${inter.className}`}
                             >
                                 Home
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a 
+                            <Link 
                                 href="/about"
                                 className={`px-4 py-2 rounded-full transition-all duration-500 text-sm font-medium 
                                 ${scrolled 
@@ -56,10 +57,10 @@ export default function Header() {
                                 ${inter.className}`}
                             >
                                 About
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a 
+                            <Link 
                                 href="/services"
                                 className={`px-4 py-2 rounded-full transition-all duration-500 text-sm font-medium 
                                 ${scrolled 
@@ -68,7 +69,7 @@ export default function Header() {
                                 ${inter.className}`}
                             >
                                 Services
-                            </a>
+                            </Link>
                         </li>
                     </ul>
 
