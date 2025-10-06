@@ -87,7 +87,7 @@ export default function Services() {
               </div>
               <h3 className="text-xl font-semibold text-[#052e16] mb-4">Personalized Care</h3>
               <p className="text-gray-600">
-                Customized skincare routines and product recommendations based on your skin's unique needs.
+                Customized skincare routines and product recommendations based on your skin&apos;s unique needs.
               </p>
               <ul className="mt-4 space-y-2 text-gray-600">
                 <li>• Custom skincare routines</li>
