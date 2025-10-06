@@ -83,7 +83,7 @@ export default function About() {
                   <div className="space-y-4">
                     <h3 className="text-2xl font-semibold text-[#052e16]">Our Mission</h3>
                     <p className="text-gray-600 leading-relaxed">
-                      DermaShield's mission is to democratize access to advanced skincare technology.
+                      DermaShield&apos;s mission is to democratize access to advanced skincare technology.
                       We believe everyone deserves access to professional-grade skin analysis and care,
                       regardless of their location or circumstances.
                     </p>
