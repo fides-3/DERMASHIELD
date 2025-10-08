@@ -49,7 +49,7 @@ export default function Home() {
               Protect Your Skin with AI-Powered Analysis
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-[#166534]">
-              Advanced skincare solutions powered by cutting-edge technology
+              Protection powered by intelligence.
             </p>
             <button className="bg-[#4ade80] hover:bg-[#166534] text-white hover:text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:shadow-lg">
               Get Started
