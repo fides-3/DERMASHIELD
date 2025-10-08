@@ -45,7 +45,7 @@ export default function Home() {
 
         <div className="max-w-6xl mx-auto px-4 py-16 flex flex-col md:flex-row items-center justify-between gap-12 relative z-10">
           <div className="flex-1 text-center md:text-left">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-[#15803d]">
+            <h1 className="text-3xl md:text-6xl font-bold mb-6 text-[#15803d]">
               Protect Your Skin with AI-Powered Analysis
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-[#166534]">
