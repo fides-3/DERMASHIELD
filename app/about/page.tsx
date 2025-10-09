@@ -85,7 +85,7 @@ export default function About() {
                     <p className="text-gray-600 leading-relaxed">
                       DermaShield&apos;s mission is to democratize access to advanced skincare technology.
                       We believe everyone deserves access to professional-grade skin analysis and care,
-                      regardless of their location or circumstances.
+                      regardless of their location or circumstances. By harnessing the power of artificial intelligence and expert dermatological insights, we strive to bridge the gap between cutting-edge medical innovation and everyday wellness. Our commitment is to empower individuals with the knowledge, tools, and confidence they need to take control of their skin health. 
                     </p>
                     <ul className="space-y-2 text-gray-600">
                       <li className="flex items-center gap-2">
@@ -136,6 +136,12 @@ export default function About() {
                         </svg>
                         Personalized care recommendations
                       </li>
+                      <li className="flex items-center gap-2">
+                        <svg className="w-5 h-5 text-[#15803d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        Progress  Tracking
+                      </li>
                     </ul>
                   </div>
                 )}
@@ -170,13 +176,13 @@ export default function About() {
                   </div>
                 )}
               </div>
-              <div className="relative h-[400px] order-1 md:order-2 rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative h-[400px] w-[400px] order-1 md:order-2 rounded-full overflow-hidden shadow-2xl mx-auto border-2 border-white">
                 <Image
                   src="/landingimage.jpeg"
                   alt="Skincare Technology"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, 400px"
                 />
               </div>
             </div>

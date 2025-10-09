@@ -1,4 +1,5 @@
 import Header from '../components/header'
+import Link from 'next/link'
 
 export default function Services() {
   return (
@@ -41,9 +42,10 @@ export default function Services() {
         </div>
         <div className="max-w-6xl mx-auto px-4 relative z-10">
           <h2 className="text-4xl font-bold text-center text-[#15803d] mb-16">Our Services</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8 items-start">
             
-            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 aspect-square flex flex-col justify-between">
+            {/* Skin Analysis Card */}
+            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 aspect-square flex flex-col">
               <div className="flex flex-col items-center flex-1">
                 <div className="h-12 w-12 mb-4 flex items-center justify-center">
                   <svg className="w-10 h-10 text-[#15803d] drop-shadow-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -51,19 +53,30 @@ export default function Services() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold text-[#052e16] mb-3 text-center">Skin Analysis</h3>
-                <p className="text-gray-600 text-xs text-center mb-3 flex-1">
+                <p className="text-gray-600 text-xs text-center mb-4 flex-1">
                   AI-powered analysis of your skin condition and tracking improvements.
                 </p>
               </div>
-              <ul className="text-xs text-gray-600 space-y-1">
-                <li>• Detailed reports</li>
-                <li>• Progress tracking</li>
-                <li>• AI recommendations</li>
-              </ul>
+              <div className="mt-auto">
+                <ul className="text-xs text-gray-600 space-y-1 mb-4">
+                  <li>• Detailed reports</li>
+                  <li>• Progress tracking</li>
+                  <li>• AI recommendations</li>
+                </ul>
+                <button
+                  className="w-full px-2 py-2 bg-[#15803d] text-white rounded-md text-xs shadow transition-all duration-300 hover:bg-black hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#86efac] focus:ring-offset-2 animate-glow"
+                  type="button"
+                 
+                >
+                  <Link href="/skin-analysis">
+                    Learn More
+                  </Link>
+                </button>
+              </div>
             </div>
   
-            
-            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 aspect-square flex flex-col justify-between">
+            {/* UV Protection Card */}
+            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 aspect-square flex flex-col">
               <div className="flex flex-col items-center flex-1">
                 <div className="h-12 w-12 mb-4 flex items-center justify-center">
                   <svg className="w-10 h-10 text-[#15803d] drop-shadow-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -71,39 +84,55 @@ export default function Services() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold text-[#052e16] mb-3 text-center">UV Protection</h3>
-                <p className="text-gray-600 text-xs text-center mb-3 flex-1">
+                <p className="text-gray-600 text-xs text-center mb-4 flex-1">
                   Real-time UV monitoring and personalized protection recommendations.
                 </p>
               </div>
-              <ul className="text-xs text-gray-600 space-y-1">
-                <li>• Real-time UV monitoring</li>
-                <li>• Custom protection advice</li>
-                <li>• Exposure alerts</li>
-              </ul>
+              <div className="mt-auto">
+                <ul className="text-xs text-gray-600 space-y-1 mb-4">
+                  <li>• Real-time UV monitoring</li>
+                  <li>• Custom protection advice</li>
+                  <li>• Exposure alerts</li>
+                </ul>
+                <button
+                  className="w-full px-2 py-2 bg-[#15803d] text-white rounded-md text-xs shadow transition-all duration-300 hover:bg-black hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#86efac] focus:ring-offset-2 animate-glow"
+                  type="button"
+                >
+                  Learn More
+                </button>
+              </div>
             </div>
 
             {/* Personalized Care Card */}
-            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 aspect-square flex flex-col justify-between">
+            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 aspect-square flex flex-col">
               <div className="flex flex-col items-center flex-1">
                 <div className="h-12 w-12 mb-4 flex items-center justify-center">
                   <svg className="w-10 h-10 text-[#15803d] drop-shadow-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold text-[#052e16] mb-3 text-center">Personalized Care</h3>
-                <p className="text-gray-600 text-xs text-center mb-3 flex-1">
-                  Customized skincare routines tailored to your unique skin needs.
+                <h3 className="text-lg font-semibold text-[#052e16] mb-3 text-center">Customized Care</h3>
+                <p className="text-gray-600 text-xs text-center mb-6 flex-1">
+                  Skincare routines tailored to your unique skin needs.
                 </p>
               </div>
-              <ul className="text-xs text-gray-600 space-y-1">
-                <li>• Custom skincare routines</li>
-                <li>• Product recommendations</li>
-               
-              </ul>
+              <div className="mt-auto">
+                <ul className="text-xs text-gray-600 space-y-1 mb-5">
+                  <li>• Custom skincare routines</li>
+                  <li>• Product recommendations</li>
+                  <li>• Routine tracking</li>
+                </ul>
+                <button
+                  className="w-full px-2 py-2 bg-[#15803d] text-white rounded-md text-xs shadow transition-all duration-300 hover:bg-black hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#86efac] focus:ring-offset-2 animate-glow"
+                  type="button"
+                >
+                  Learn More
+                </button>
+              </div>
             </div>
 
-            {/* My Journal Card */}
-            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 aspect-square flex flex-col justify-between">
+          
+            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 aspect-square flex flex-col">
               <div className="flex flex-col items-center flex-1">
                 <div className="h-12 w-12 mb-4 flex items-center justify-center">
                   <svg className="w-10 h-10 text-[#15803d] drop-shadow-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -111,19 +140,27 @@ export default function Services() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold text-[#052e16] mb-3 text-center">My Journal</h3>
-                <p className="text-gray-600 text-xs text-center mb-3 flex-1">
+                <p className="text-gray-600 text-xs text-center mb-4 flex-1">
                   Track your skincare journey with daily observations and photos.
                 </p>
               </div>
-              <ul className="text-xs text-gray-600 space-y-1">
-                <li>• Daily skin observations</li>
-                <li>• Photo progress tracking</li>
-                <li>• Personal skincare notes</li>
-              </ul>
+              <div className="mt-auto">
+                <ul className="text-xs text-gray-600 space-y-1 mb-4">
+                  <li>• Daily skin observations</li>
+                  <li>• Photo progress tracking</li>
+                  <li>• Personal skincare notes</li>
+                </ul>
+                <button
+                  className="w-full px-2 py-2 bg-[#15803d] text-white rounded-md text-xs shadow transition-all duration-300 hover:bg-black hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#86efac] focus:ring-offset-2 animate-glow"
+                  type="button"
+                >
+                  Learn More
+                </button>
+              </div>
             </div>
 
             {/* Ingredient Safety Checker Card */}
-            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 aspect-square flex flex-col justify-between">
+            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 aspect-square flex flex-col">
               <div className="flex flex-col items-center flex-1">
                 <div className="h-12 w-12 mb-4 flex items-center justify-center">
                   <svg className="w-10 h-10 text-[#15803d] drop-shadow-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -131,15 +168,23 @@ export default function Services() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold text-[#052e16] mb-3 text-center">Ingredient Safety</h3>
-                <p className="text-gray-600 text-xs text-center mb-3 flex-1">
+                <p className="text-gray-600 text-xs text-center mb-4 flex-1">
                   Verify product ingredients for allergens and skin compatibility.
                 </p>
               </div>
-              <ul className="text-xs text-gray-600 space-y-1">
-                <li>• Ingredient analysis</li>
-                <li>• Allergen detection</li>
-                <li>• Safety recommendations</li>
-              </ul>
+              <div className="mt-auto">
+                <ul className="text-xs text-gray-600 space-y-1 mb-4">
+                  <li>• Ingredient analysis</li>
+                  <li>• Allergen detection</li>
+                  <li>• Safety recommendations</li>
+                </ul>
+                <button
+                  className="w-full px-2 py-2 bg-[#15803d] text-white rounded-md text-xs shadow transition-all duration-300 hover:bg-black hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#86efac] focus:ring-offset-2 animate-glow"
+                  type="button"
+                >
+                  Learn More
+                </button>
+              </div>
             </div>
           </div>
         </div>
