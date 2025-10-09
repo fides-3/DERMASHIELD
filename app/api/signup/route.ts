@@ -68,11 +68,9 @@ export async function POST(req: Request) {
                 { status: 201 }
             );
 
-        } catch (error:any) {
-            
-
+        } catch (error: unknown) {
             // Handle MongoDB duplicate key error
-            if (error.code === 11000) {
+            if (error && typeof error === 'object' && 'code' in error && (error as { code: number }).code === 11000) {
                 return NextResponse.json(
                     { message: 'Email already registered' },
                     { status: 409 }

@@ -12,12 +12,12 @@ export default function SignUp() {
   });
   const [message,setMessage]=useState('');
   
-  const handleChange=(e:any)=>{
+  const handleChange=(e: React.ChangeEvent<HTMLInputElement>)=>{
     setFormData({...formData,[e.target.name]:e.target.value,})
   }
 
 
-  const handleSubmit =async  (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit =async  (e: React.FormEvent) => {
     e.preventDefault();
     setMessage('')
     if(formData.password!==formData.confirmPassword){
@@ -42,8 +42,7 @@ export default function SignUp() {
         setFormData({fullname:'',email:'',password:'',confirmPassword:''})
       }
 
-    }catch(error){
-      console.error('Signup error:',error)  
+    }catch{
       setMessage('An error occurred. Please try again.');
     }
   };
@@ -55,7 +54,7 @@ export default function SignUp() {
           {/* Top Image Section with Wavy Bottom */}
           <div className="relative">
             {/* Wrapper for image and wave clip */}
-            <div className="relative" style={{ clipPath: 'url(#wave-clip)' }}>
+            <div className="relative wave-clip">
               {/* Background Image */}
               <div className="h-[200px] relative">
                 <Image 
@@ -69,10 +68,9 @@ export default function SignUp() {
 
             {/* SVG for wave clip path and decorative line */}
             <svg 
-              className="absolute bottom-0 left-0 w-full"
+              className="absolute bottom-0 left-0 w-full svg-wave-transform"
               viewBox="0 0 500 50" 
               preserveAspectRatio="none"
-              style={{ transform: 'translateY(49%)' }}
             >
               <defs>
                 <clipPath id="wave-clip">
@@ -113,6 +111,8 @@ export default function SignUp() {
                   onChange={handleChange}
                   value={formData.fullname}
                   name="fullname"
+                  placeholder="Enter your full name"
+                  title="Full Name"
                 />
               </div>
 
@@ -125,6 +125,8 @@ export default function SignUp() {
                   onChange={handleChange}
                   value={formData.email}
                   name="email"
+                  placeholder="Enter your email"
+                  title="Email"
                 />
               </div>
 
@@ -137,6 +139,8 @@ export default function SignUp() {
                   onChange={handleChange}
                   value={formData.password}
                   name="password"
+                  placeholder="Enter your password"
+                  title="Password"
                 />
               </div>
 
@@ -149,6 +153,8 @@ export default function SignUp() {
                   onChange={handleChange}
                   value={formData.confirmPassword}
                   name="confirmPassword"
+                  placeholder="Confirm your password"
+                  title="Confirm Password"
                 />
               </div>
 
