@@ -61,7 +61,7 @@ export default function Services() {
                 <li>• AI recommendations</li>
               </ul>
             </div>
-
+  
             
             <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 aspect-square flex flex-col justify-between">
               <div className="flex flex-col items-center flex-1">
