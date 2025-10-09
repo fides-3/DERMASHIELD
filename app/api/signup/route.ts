@@ -68,7 +68,9 @@ export async function POST(req: Request) {
                 { status: 201 }
             );
 
-        } catch (error: any) {
+        } catch (error:any) {
+            
+
             // Handle MongoDB duplicate key error
             if (error.code === 11000) {
                 return NextResponse.json(
