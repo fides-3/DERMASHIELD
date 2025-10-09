@@ -3,7 +3,7 @@
  import Link from 'next/link'
  import Image from 'next/image';
 
- export default function login(){
+ export default function Login(){
     const[formData,setFormData]=useState({
         email:'',
         password:''
@@ -14,7 +14,7 @@
         setFormData({...formData,[e.target.name]:e.target.value,})
     }
 
-    const handleSubmit=async(e:React.FormEvent)=>{
+    const handleSubmit=async(e:React.FormEvent<HTMLFormElement>)=>{
         e.preventDefault();
         setMessage('');
         try{
@@ -35,6 +35,7 @@
                 setFormData({email:'',password:''})
             }
         }catch(error){
+            console.error('Login error:',error)
         setMessage('An error occurred please try again')
     
     } 
@@ -129,6 +130,7 @@
                       >
                         Login
                       </button>
+                      
                      
                     </form>
         
