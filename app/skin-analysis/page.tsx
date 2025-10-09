@@ -1,5 +1,6 @@
 'use client'
 import Header from '../components/header'
+import Image from 'next/image'
 
 export default function SkinAnalysis() {
   const analysisResults = [
@@ -74,10 +75,11 @@ export default function SkinAnalysis() {
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl bg-white">
                   
                   {/* Face Photo */}
-                  <img 
+                  <Image 
                     src="/analysis.jpg" 
                     alt="Face Analysis Demo" 
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                   
                   {/* Analysis Points - Always Visible */}

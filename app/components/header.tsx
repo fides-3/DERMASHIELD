@@ -8,11 +8,6 @@ const inter = Inter({
     weight: ['400', '500', '600'],
 });
 
-const orbitron = Orbitron({
-    subsets: ['latin'],
-    weight: ['400', '700', '900'],
-});
-
 const exo2 = Exo_2({
     subsets: ['latin'],
     weight: ['600', '700', '800'],
