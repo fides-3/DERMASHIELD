@@ -17,7 +17,7 @@ export default function SignUp() {
   }
 
 
-  const handleSubmit =async  (e: React.FormEvent) => {
+  const handleSubmit =async  (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setMessage('')
     if(formData.password!==formData.confirmPassword){
@@ -43,6 +43,7 @@ export default function SignUp() {
       }
 
     }catch(error){
+      console.error('Signup error:',error)  
       setMessage('An error occurred. Please try again.');
     }
   };
