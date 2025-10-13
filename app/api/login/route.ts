@@ -11,7 +11,6 @@ interface UserDoc {
     password: string; // Must be included because we select it explicitly
     fullname: string; // Must be included because we select it explicitly
 }
-// -----------------------------------------------------------
 
 export async function POST(req: Request) {
     const { email, password } = await req.json();
