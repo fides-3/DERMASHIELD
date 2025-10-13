@@ -112,6 +112,11 @@ export default function Login() {
                                 title="Password"
                             />
                         </div>
+                        <div className="flex justify-end text-sm">
+                            <Link href="/forgot-password"
+                            className={`font-medium text-[#15803d] hover:text-[#2d5c27] transition-colors duration-200`}>Forgot password?</Link>
+                        </div>
+
 
                         {/* Submit Button */}
                         <button
