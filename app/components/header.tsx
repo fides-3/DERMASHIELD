@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from 'react';
-import { Inter, Orbitron, Exo_2 } from 'next/font/google';
+import { Inter, Exo_2 } from 'next/font/google';
 import Link from 'next/link';
 
 const inter = Inter({
