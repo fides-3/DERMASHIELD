@@ -8,7 +8,7 @@ export default function ResetPassword() {
     const searchParams=useSearchParams()
     
     const [message,setMessage]=useState('')
-  const[password,setPassword]=useState('')
+    const[password,setPassword]=useState('')
     const token=searchParams.get("token")
    
 
