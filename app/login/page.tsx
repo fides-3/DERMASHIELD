@@ -119,12 +119,14 @@ export default function Login() {
 
 
                         {/* Submit Button */}
+                        <Link href="/">
                         <button
                             type="submit"
                             className={`w-full bg-[#15803d] text-white py-3 rounded-lg font-semibold shadow-md shadow-[#15803d]/30 hover:bg-opacity-90 transition-all duration-300 text-base mt-4`}
                         >
                             Login
                         </button>
+                        </Link>
                     </form>
 
                     {/* Submission Message */}
