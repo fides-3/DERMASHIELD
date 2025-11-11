@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link  from "next/link";
 
 const CONCERNS = [
   "Acne", "Dryness", "Uneven tone", "Dark spots", "Eczema",
@@ -97,14 +98,17 @@ export default function SkinConcernsPage() {
                 />
               </div>
 
-              {/* SUBMIT BUTTON */}
+              
               <div>
+                {/* SUBMIT BUTTON */}
+              <Link href="/medicalbackground">
                 <button
                   type="submit"
                   className="w-full bg-gradient-to-r from-[#16a34a] to-[#166534] text-white py-3 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all"
                 >
                   Save & Continue
                 </button>
+                </Link>
                 {message && (
                   <p className="mt-3 text-center text-sm text-green-700">
                     {message}
