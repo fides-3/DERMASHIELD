@@ -46,7 +46,7 @@ export default function MedicalBackgroundPage() {
     try {
       localStorage.setItem('medicalBackground', JSON.stringify(conditions));
       setMessage('Medical background saved — continuing...');
-      setTimeout(() => router.push('/'), 700);
+      setTimeout(() => router.push('/medication'), 700);
     } catch (err) {
       setMessage('Could not save your medical background locally.');
     }
