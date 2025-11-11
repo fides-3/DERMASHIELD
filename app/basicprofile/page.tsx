@@ -44,8 +44,8 @@ export default function BasicProfile() {
           <div className="bg-gradient-to-r from-[#15803d] to-[#2d5c27] px-5 sm:px-6 py-4 sm:py-6 rounded-t-3xl relative overflow-hidden">
             <div className="flex items-start gap-3">
               <div className="flex-1">
-                <h1 className="text-2xl sm:text-2xl font-extrabold text-white leading-tight mb-0">Let's get started</h1>
-                <p className="text-[#c8f6d1] text-sm max-w-lg">Answer a few quick questions and we'll tailor product suggestions just for you.</p>
+                <h1 className="text-2xl sm:text-2xl font-extrabold text-white leading-tight mb-0">Let&apos;s get started</h1>
+                            <p className="text-white/90 text-sm max-w-lg">Answer a few quick questions and we&apos;ll tailor product suggestions just for you.</p>
               </div>
             </div>
 
