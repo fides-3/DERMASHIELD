@@ -54,7 +54,7 @@ export default function MedicationPage() {
     try {
       localStorage.setItem('medicationInfo', JSON.stringify(medicationInfo));
       setMessage('Medication information saved — continuing...');
-      setTimeout(() => router.push('/'), 700);
+      setTimeout(() => router.push('/lifestyle-environment'), 700);
     } catch  {
       setMessage('Could not save your medication information locally.');
     }
