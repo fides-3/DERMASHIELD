@@ -31,7 +31,7 @@ export default function LifestyleEnvironmentPage() {
       localStorage.setItem('lifestyleEnvironment', JSON.stringify(lifestyleData));
       setMessage('Lifestyle information saved — continuing...');
       setTimeout(() => router.push('/current-products'), 700);
-    } catch (err) {
+    } catch {
       setMessage('Could not save your lifestyle information locally.');
     }
   }
