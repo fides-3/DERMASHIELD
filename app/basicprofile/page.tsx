@@ -1,7 +1,6 @@
 "use client"
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Link from 'next/link'
 
 export default function BasicProfile() {
   const router = useRouter();
@@ -23,7 +22,7 @@ export default function BasicProfile() {
     try {
       localStorage.setItem('basicProfile', JSON.stringify(profile));
       setMessage('Profile saved');
-      setTimeout(()=> router.push('/'), 900);
+      setTimeout(()=> router.push('/skinconcerns'), 900);
     } catch {
       setMessage('Could not save profile locally');
     }
@@ -166,14 +165,14 @@ export default function BasicProfile() {
 
             {/* Submit Button */}
             <div className="pt-3">
-                <Link href="/skinconcerns">
+                
               <button
                 type="submit"
                 className="w-full bg-gradient-to-r from-[#15803d] to-[#2d5c27] text-white py-3 rounded-lg font-bold text-base hover:shadow-md hover:shadow-[#15803d]/20 transition-all duration-250 transform hover:scale-102"
               >
                 Save & Continue
               </button>
-              </Link>
+            
 
               {message && (
                 <p className={`text-center mt-3 text-sm font-semibold ${message.includes('saved') ? 'text-[#15803d]' : 'text-red-500'}`}>

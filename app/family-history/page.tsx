@@ -2,25 +2,25 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-const MEDICATION_OPTIONS = [
+const FAMILY_HISTORY_OPTIONS = [
   {
     id: 'yes',
-    label: 'Yes, I take medications that affect my skin',
-    description: 'Please specify which medications'
+    label: 'Yes, there is a history of skin conditions',
+    description: 'Please specify which conditions'
   },
   {
     id: 'no',
-    label: 'No, I don\'t take any medications that affect my skin',
-    description: 'No skin-affecting medications'
+    label: 'No, no known family history',
+    description: 'No family skin condition history'
   },
   {
     id: 'not-sure',
-    label: 'Not sure if my medications affect my skin',
-    description: 'Uncertain about medication effects'
+    label: 'Not sure about family history',
+    description: 'Uncertain about family medical history'
   }
 ];
 
-export default function MedicationPage() {
+export default function FamilyHistoryPage() {
   const router = useRouter();
   const [selected, setSelected] = useState('');
   const [specification, setSpecification] = useState('');
@@ -42,21 +42,21 @@ export default function MedicationPage() {
     }
 
     if (selected === 'yes' && !specification.trim()) {
-      setMessage('Please specify which medications affect your skin');
+      setMessage('Please specify the family skin conditions');
       return;
     }
 
-    const medicationInfo = {
+    const familyHistoryInfo = {
       option: selected,
       specification: selected === 'yes' ? specification.trim() : ''
     };
 
     try {
-      localStorage.setItem('medicationInfo', JSON.stringify(medicationInfo));
-      setMessage('Medication information saved — continuing...');
-      setTimeout(() => router.push('/family-history'), 700);
+      localStorage.setItem('familyHistory', JSON.stringify(familyHistoryInfo));
+      setMessage('Family history saved — continuing...');
+      setTimeout(() => router.push('/lifestyle-environment'), 700);
     } catch  {
-      setMessage('Could not save your medication information locally.');
+      setMessage('Could not save your family history locally.');
     }
   }
 
@@ -70,49 +70,58 @@ export default function MedicationPage() {
             {/* Left panel - decorative on large screens */}
             <aside className="hidden lg:flex flex-col justify-start items-center text-center gap-4 p-8 pt-16 bg-gradient-to-b from-[#15803d] to-[#2d5c27] text-white rounded-l-3xl">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-md bg-white/10 flex items-center justify-center text-white font-bold">💊</div>
-                <div className="text-sm text-white/90">Medication interactions</div>
+                <div className="w-12 h-12 rounded-md bg-white/10 flex items-center justify-center text-white font-bold">👨‍👩‍👧‍👦</div>
+                <div className="text-sm text-white/90">Genetic factors</div>
               </div>
-              <h2 className="text-3xl font-extrabold">Medications & Skin</h2>
-              <p className="text-white/90 max-w-sm">Some medications can make your skin more sensitive or cause reactions. Let us know so we can recommend safer products.</p>
+              <h2 className="text-3xl font-extrabold">Family History</h2>
+              <p className="text-white/90 max-w-sm">Family history helps us understand your genetic predisposition to certain skin conditions and tailor recommendations accordingly.</p>
               
               {/* Additional informational content */}
               <div className="space-y-4 mt-6 text-left max-w-sm">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <h3 className="font-semibold text-white mb-2">Common Examples</h3>
+                  <h3 className="font-semibold text-white mb-2">Why This Matters</h3>
                   <ul className="text-sm text-white/90 space-y-1">
-                    <li>• Retinoids (acne treatments)</li>
-                    <li>• Blood pressure medications</li>
-                    <li>• Antibiotics & antimalarials</li>
-                    <li>• Chemotherapy drugs</li>
+                    <li>• Genetic predisposition to conditions</li>
+                    <li>• Early detection and prevention</li>
+                    <li>• Personalized care recommendations</li>
                   </ul>
                 </div>
                 
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                  <h3 className="font-semibold text-white mb-2">Skin Effects</h3>
+                  <h3 className="font-semibold text-white mb-2">Common Hereditary Conditions</h3>
                   <div className="text-sm text-white/90 space-y-1">
-                    <p>• Increased sun sensitivity</p>
-                    <p>• Dryness or irritation</p>
-                    <p>• Changes in healing</p>
-                    <p>• Allergic reactions</p>
+                    <p>• Eczema & Atopic Dermatitis</p>
+                    <p>• Psoriasis</p>
+                    <p>• Skin Cancer</p>
+                    <p>• Vitiligo</p>
+                    <p>• Rosacea</p>
+                  </div>
+                </div>
+                
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                  <h3 className="font-semibold text-white mb-2">Benefits of Knowing</h3>
+                  <div className="text-sm text-white/90 space-y-1">
+                    <p>• Preventive skincare measures</p>
+                    <p>• Regular screening schedules</p>
+                    <p>• Targeted product selection</p>
                   </div>
                 </div>
               </div>
               
-              <div className="mt-4 text-sm text-white/80">🔒 Your information remains confidential</div>
+              <div className="mt-4 text-sm text-white/80">🔒 Family information remains private</div>
             </aside>
 
             {/* Right panel - form */}
             <section className="p-5 sm:p-6">
               <header className="mb-4">
-                <h1 className="text-2xl font-extrabold text-[#15803d]">Do you take any medications that affect your skin?</h1>
-                <p className="text-[#2d5c27] text-sm mt-1">This helps us avoid recommending products that might interact with your medications.</p>
+                <h1 className="text-2xl font-extrabold text-[#15803d]">Any history of skin conditions in your family?</h1>
+                <p className="text-[#2d5c27] text-sm mt-1">Family history helps us understand genetic factors that might affect your skin health.</p>
               </header>
 
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                   <div className="space-y-3">
-                    {MEDICATION_OPTIONS.map(option => {
+                    {FAMILY_HISTORY_OPTIONS.map(option => {
                       const active = selected === option.id;
                       return (
                         <button
@@ -146,11 +155,11 @@ export default function MedicationPage() {
                 {/* Specification input - only show if "Yes" is selected */}
                 {selected === 'yes' && (
                   <div className="space-y-2">
-                    <label className="block text-sm font-medium text-[#15803d]">Please specify your medications</label>
+                    <label className="block text-sm font-medium text-[#15803d]">Please specify the skin conditions</label>
                     <textarea
                       value={specification}
                       onChange={e => setSpecification(e.target.value)}
-                      placeholder="List medications that affect your skin (e.g., retinoids, blood pressure meds, etc.)"
+                      placeholder="List family skin conditions (e.g., eczema, psoriasis, skin cancer, vitiligo, etc.)"
                       rows={3}
                       className="w-full px-3 py-2 rounded-lg border-2 border-[#e6f6eb] focus:border-[#4ade80] focus:ring-2 focus:ring-[#4ade80]/20 bg-white text-[#2d5c27] text-sm resize-none"
                     />
