@@ -109,7 +109,7 @@ export default function CurrentProductsPage() {
       localStorage.setItem('currentProducts', JSON.stringify(currentProductsData));
       setMessage('Current products saved — continuing...');
       setTimeout(() => router.push('/'), 700);
-    } catch (err) {
+    } catch  {
       setMessage('Could not save your current products locally.');
     }
   }
