@@ -45,7 +45,7 @@ export default function AlertsPreferencesPage() {
       localStorage.setItem('alertsPreferences', JSON.stringify(alertsPreferences));
       setMessage('Preferences saved — completing setup...');
       setTimeout(() => router.push('/'), 700);
-    } catch (err) {
+    } catch  {
       setMessage('Could not save your preferences locally.');
     }
   }
@@ -156,7 +156,7 @@ export default function AlertsPreferencesPage() {
                       <div className="text-[#15803d] text-xl">💡</div>
                       <div>
                         <h4 className="font-semibold text-[#15803d] text-sm">Daily Reminders</h4>
-                        <p className="text-[#2d5c27] text-xs mt-1">You'll receive gentle daily notifications to help establish and maintain your skincare routine. Perfect for building new habits!</p>
+                        <p className="text-[#2d5c27] text-xs mt-1">You&apos;ll receive gentle daily notifications to help establish and maintain your skincare routine. Perfect for building new habits!</p>
                       </div>
                     </div>
                   </div>
@@ -168,7 +168,7 @@ export default function AlertsPreferencesPage() {
                       <div className="text-[#15803d] text-xl">📈</div>
                       <div>
                         <h4 className="font-semibold text-[#15803d] text-sm">Weekly Check-ins</h4>
-                        <p className="text-[#2d5c27] text-xs mt-1">You'll receive weekly reminders to review and maintain your routine. Great for staying on track without daily interruptions.</p>
+                        <p className="text-[#2d5c27] text-xs mt-1">You&apos;ll receive weekly reminders to review and maintain your routine. Great for staying on track without daily interruptions.</p>
                       </div>
                     </div>
                   </div>
