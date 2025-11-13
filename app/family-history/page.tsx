@@ -55,7 +55,7 @@ export default function FamilyHistoryPage() {
       localStorage.setItem('familyHistory', JSON.stringify(familyHistoryInfo));
       setMessage('Family history saved — continuing...');
       setTimeout(() => router.push('/lifestyle-environment'), 700);
-    } catch (err) {
+    } catch  {
       setMessage('Could not save your family history locally.');
     }
   }
