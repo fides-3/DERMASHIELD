@@ -82,7 +82,7 @@ export default function AlertsPreferencesPage() {
                   <div className="text-sm text-white/90 space-y-1">
                     <p>• <strong>Daily:</strong> Perfect for new routines</p>
                     <p>• <strong>Weekly:</strong> Gentle maintenance nudges</p>
-                    <p>• <strong>Never:</strong> Full control, no interruptions</p>
+                    <p>• <strong>Never:</strong> Full control and no interruptions</p>
                   </div>
                 </div>
                 
