@@ -56,6 +56,19 @@ export default function SkinAnalysis() {
           
           {/* Header Section */}
           <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            {/* Back to Services Button */}
+            <div className="mb-6">
+              <button 
+              onClick={() => window.location.href = '/services'}
+              className="inline-flex items-center px-4 py-2 text-sm font-medium text-[#15803d] bg-white border border-[#15803d] rounded-lg hover:bg-[#15803d] hover:text-white transition-colors duration-200 shadow-md"
+              >
+              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              Back to Services
+              </button>
+            </div>
+            
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#15803d] mb-4 sm:mb-6">
               AI Skin Analysis
             </h1>
