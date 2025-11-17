@@ -97,8 +97,11 @@ export default function Services() {
                 <button
                   className="w-full px-2 py-2 bg-[#15803d] text-white rounded-md text-xs shadow transition-all duration-300 hover:bg-black hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#86efac] focus:ring-offset-2 animate-glow"
                   type="button"
-                >
-                  Learn More
+                > 
+                <Link href="/uv-protection">
+                    Learn More
+                  </Link>
+                
                 </button>
               </div>
             </div>
@@ -126,7 +129,10 @@ export default function Services() {
                   className="w-full px-2 py-2 bg-[#15803d] text-white rounded-md text-xs shadow transition-all duration-300 hover:bg-black hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#86efac] focus:ring-offset-2 animate-glow"
                   type="button"
                 >
-                  Learn More
+                    <Link href="/customized-care">
+                    Learn More
+                  </Link>
+                
                 </button>
               </div>
             </div>
@@ -158,7 +164,6 @@ export default function Services() {
                 </button>
               </div>
             </div>
-
             {/* Ingredient Safety Checker Card */}
             <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 aspect-square flex flex-col">
               <div className="flex flex-col items-center flex-1">
